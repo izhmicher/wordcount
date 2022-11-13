@@ -10,6 +10,11 @@ import (
 
 func main() {
 	words := os.Args[1]
-	wordcount := len(strings.Split(words, " "))
-	fmt.Println(wordcount)
+
+	if words != "" {
+		wordcount := len(strings.Split(words, " "))
+		fmt.Println(wordcount)
+	} else {
+		fmt.Println(0)
+	}
 }
